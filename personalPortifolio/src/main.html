@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Mirza Abdul Rafea</title>
 		<link rel="stylesheet" href="main.css">
 		<script src="main.js" defer></script>
@@ -25,14 +26,18 @@
 		<div class="m-right-container">
 			<h2 class="right-name-heading">Mirza Abdul Rafea</h2>
 			<h1 class="right-heading">As Catastrophe </h1>
-			<a href="⊣ᔑᒲ╎リ⊣.html" id="right-button" class="right-button">
+			<button type="button" id="right-button" class="right-button" popovertarget="coming-soon-popover">
 				View ⊣ᔑᒲ╎リ⊣ !¡𝙹∷ℸ╎⎓𝙹ꖎ╎𝙹
-			</a>
+			</button>
 			<div class="m-logo-container">
 				<img class="m-logo" src="../assets/LoL-logo.png" alt="LoL Logo">
 				<img class="m-logo" src="../assets/osu-logo.png" alt="Osu Logo">
 				<img class="m-logo" src="../assets/valorant-logo.png" alt="Valorant Logo">
 			</div>
+		</div>
+		<div id="coming-soon-popover" class="coming-soon-popover" popover>
+			<p>Coming soon!</p>
+			<button type="button" class="coming-soon-close" popovertarget="coming-soon-popover" popovertargetaction="hide">Close</button>
 		</div>
 	</body>
 </html>

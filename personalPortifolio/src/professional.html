@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Professional</title>
         <link rel="stylesheet" href="main.css">
     </head>
@@ -37,10 +38,25 @@
                 <h1 class="section-heading">Projects</h1>
                 <div class="projects-section-container">
                     <div class="project-container">
-                        <img class="project-image" src="" alt="">
                         <h1 class="project-heading">C.M.A.L.D</h1>
-                        <p class="project description">Custom Memory Allocator & Leak Detector</p>
-                        <p class="project-sub-description">A lightweight, C++ memory management and tracking system.</p>
+                        <p class="project-description">Custom Memory Allocator & Leak Detector</p>
+                        <ul class="project-sub-description">
+                            <li>Custom Heap Management: Overrides/wraps memory allocation to track dynamic memory usage manually.</li>
+                            <li>Contiguous Chunk Merging: Traverses and merge adjacent empty chunks to satisfy larger allocation requests.</li>
+                            <li>Memory Leak Detection: Tracks live allocations and deletions to prevent leaks.</li>
+                        </ul>
+                        <a class="project-repo-button" href="https://github.com/Abdul-Rafea/C.M.A.L.D" target="_blank" rel="noopener noreferrer">View Repo</a>
+                    </div>
+                    <div class="project-container">
+                        <h1 class="project-heading">BitsZipper</h1>
+                        <p class="project-description">Compressing and decompressing files by byte packing and unpacking</p>
+                        <ul class="project-sub-description">
+                            <li>Lossless Compression (no loss of data)</li>
+                            <li>Automatically computes the minimum required bits per character based on unique characters</li>
+                            <li>Packs multiple characters in a single byte</li>
+                            <li>Works on 8-bit ASCII standard</li>
+                        </ul>
+                        <a class="project-repo-button" href="https://github.com/Abdul-Rafea/BitsZipper" target="_blank" rel="noopener noreferrer">View Repo</a>
                     </div>
                 </div>
             </section>
@@ -96,6 +112,25 @@
                         </div>
                     </div>
                 </div>
+            </section>
+            <!-- Education Section -->
+            <section class="education-section" id="education">
+                <h1 class="section-heading">Education</h1>
+                <ol class="education-section-container">
+                    <li class="education-container">
+                        <span class="education-timeline-dot" aria-hidden="true"></span>
+                        <p class="education-sub-description">2025 - Present</p>
+                        <h1 class="education-heading">COMSATS University, Lahore</h1>
+                        <p class="education-description">BS Computer Engineering</p>
+                        <p class="education-sub-description">Currently in 3rd semester</p>
+                    </li>
+                    <li class="education-container">
+                        <span class="education-timeline-dot" aria-hidden="true"></span>
+                        <p class="education-sub-description">Previous</p>
+                        <h1 class="education-heading">Army Public School, Sargodha</h1>
+                        <p class="education-description">FSc</p>
+                    </li>
+                </ol>
             </section>
         </div>
     </body>
