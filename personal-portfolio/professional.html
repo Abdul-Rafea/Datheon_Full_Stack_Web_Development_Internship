@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Professional</title>
+        <link rel="stylesheet" href="professional.css">
+        <script src="professional.js" defer></script>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="nav-container">
+            <a class="nav-element home-link" href="index.html">Home</a>
+            <div class="nav-menu">
+                <button class="nav-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                    Menu
+                    <span class="nav-menu-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="nav-container2" id="primary-navigation">
+                    <a class="nav-element" href="#projects">Projects</a>
+                    <a class="nav-element" href="#skills">Skills</a>
+                    <a class="nav-element" href="#education">Education</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <img class="professional-pic" src="./assets/linkedin-profile-picture.png" alt="Profile Pic">
+            <div class="hero-heading-container">
+                <h1 class="hero-heading-name">Mirza Abdul Rafea</h1>
+                <h1 class="hero-heading">As Software Engineer</h1>
+                <p class="hero-description">Software Engineer driven by strong fundamental principles and problem-solving. Specializing in low-level systems and core programming. Comfortable bridging high-level system architecture and low-level mechanics.</p>
+                <div class="hero-location-container">
+                    <svg class="hero-location-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/>
+                    </svg>
+                    <h1 class="hero-location">Lahore, Pakistan</h1>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <h1 class="section-heading">Projects</h1>
+            <div class="projects-section-container">
+                <div class="project-container">
+                    <h1 class="project-heading">C.M.A.L.D</h1>
+                    <p class="project-description">Custom Memory Allocator & Leak Detector</p>
+                    <ul class="project-description">
+                        <li>Custom Heap Management: Overrides/wraps memory allocation to track dynamic memory usage manually.</li>
+                        <li>Contiguous Chunk Merging: Traverses and merge adjacent empty chunks to satisfy larger allocation requests.</li>
+                        <li>Memory Leak Detection: Tracks live allocations and deletions to prevent leaks.</li>
+                        <li>
+                            <div class="stack-container">
+                                Tech Stack:
+                                <img class="stack-logo" src="./assets/c++logo.png" alt="C++ Logo">                                
+                            </div>
+                        </li>
+                    </ul>
+                    <a class="project-button" href="https://github.com/Abdul-Rafea/C.M.A.L.D" target="_blank" rel="noopener noreferrer">View Repo</a>
+                </div>
+                <div class="project-container">
+                    <h1 class="project-heading">BitsZipper</h1>
+                    <p class="project-description">Compressing and decompressing files by byte packing and unpacking</p>
+                    <ul class="project-description">
+                        <li>Lossless Compression (no loss of data)</li>
+                        <li>Automatically computes the minimum required bits per character based on unique characters</li>
+                        <li>Packs multiple characters in a single byte</li>
+                        <li>Works on 8-bit ASCII standard</li>
+                        <li>
+                            <div class="stack-container">
+                                Tech Stack:
+                                <img class="stack-logo" src="./assets/c++logo.png" alt="C++ Logo">                                
+                            </div>
+                        </li>
+                    </ul>
+                    <a class="project-button" href="https://github.com/Abdul-Rafea/BitsZipper" target="_blank" rel="noopener noreferrer">View Repo</a>
+                </div>
+            </div>
+        </section>
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <h1 class="section-heading">Skills</h1>
+            <div class="skills-section-container">
+                <div class="skills-container">
+                    <h1 class="skills-heading">Languages</h1>
+                    <div class="skills-logos-container">
+                        <div class="skills-logo-container">
+                            <img class="skills-logo" src="./assets/c++logo.png" alt="C++ Logo">
+                            <p class="skills-logo-heading">C++</p>
+                        </div>
+                        <div class="skills-logo-container">
+                            <img class="skills-logo" src="./assets/java-logo.png" alt="Java Logo">
+                            <p class="skills-logo-heading">Java</p>
+                        </div>
+                        <div class="skills-logo-container">
+                            <img class="skills-logo" src="./assets/javascript-logo.png" alt="Javascript Logo">
+                            <p class="skills-logo-heading">JS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-container">
+                    <h1 class="skills-heading">Frameworks</h1>
+                    <div class="skills-logos-container">
+                        <div class="skills-logo-container">
+                            <img class="skills-logo" src="./assets/react-logo.png" alt="React Logo">
+                            <p class="skills-logo-heading">React</p>
+                        </div>
+                        <div class="skills-logo-container">
+                            <img class="skills-logo" src="./assets/tailwind-logo.png" alt="Tailwind Logo">
+                            <p class="skills-logo-heading">Tailwind</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-container">
+                    <h1 class="skills-heading">Extras</h1>
+                    <div class="skills-logos-container">
+                        <div class="skills-logo-container">
+                            <img class="skills-logo" src="./assets/canva-logo.png" alt="Canva Logo">
+                            <p class="skills-logo-heading">Canva</p>
+                        </div>
+                        <div class="skills-logo-container">
+                            <img class="skills-logo" src="./assets/figma-logo.png" alt="Figma Logo">
+                            <p class="skills-logo-heading">Figma</p>
+                        </div>
+                        <div class="skills-logo-container">
+                            <img class="skills-logo" src="./assets/git-logo.png" alt="Git Logo">
+                            <p class="skills-logo-heading">Git</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Education Section -->
+        <section class="section" id="education">
+            <h1 class="section-heading">Education</h1>
+            <ol class="education-section-container">
+                <li class="education-container">
+                    <span class="education-timeline-dot" aria-hidden="true"></span>
+                    <p class="education-description">2025 - Present</p>
+                    <h1 class="education-heading">COMSATS University Islamabad, Lahore Campus</h1>
+                    <p class="education-description">BS Computer Engineering</p>
+                </li>
+                <li class="education-container">
+                    <span class="education-timeline-dot" aria-hidden="true"></span>
+                    <p class="education-description">2023 - 2025</p>
+                    <h1 class="education-heading">Army Public School, Sargodha</h1>
+                    <p class="education-description">ICS</p>
+                </li>
+            </ol>
+        </section>
+    </body>
+</html>

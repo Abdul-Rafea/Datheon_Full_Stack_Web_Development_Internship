@@ -3,66 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Telemetry App</title>
+    <title>Weather App</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <script src="index.js" defer></script>
 </head>
 <body class="weather-page" id="weather-page">
-    <div class="weather-header">
-        <h1 class="weather-title">Climate Telemetry</h1>
-        <p class="weather-subtitle">Real-time global weather forecasting & atmospheric metrics</p>
-    </div>
+    <header class="weather-header">
+        <h1 class="weather-title">Weather</h1>
+        <p class="weather-subtitle">A clear look at the weather, wherever you are.</p>
+    </header>
 
-    <!-- Search Bar -->
-    <div class="weather-search-container">
-        <input type="text" id="weather-search-input" class="weather-input" placeholder="Search global city (e.g., London, Tokyo)..." autocomplete="off">
-        <button type="button" id="weather-search-button" class="weather-button">Search</button>
-    </div>
+    <main>
+        <form class="weather-search-container" id="weather-search-form">
+            <input type="search" id="weather-search-input" class="weather-input" placeholder="Search for a city..." aria-label="City name" autocomplete="off">
+            <button type="submit" id="weather-search-button" class="weather-button">Search</button>
+        </form>
 
-    <!-- Error Banner -->
-    <div id="weather-error-banner" class="weather-error-banner"></div>
+        <div id="weather-error-banner" class="weather-error-banner" role="alert"></div>
 
-    <!-- Loading Spinner -->
-    <div id="weather-spinner-container" class="weather-spinner-container">
-        <div class="weather-spinner"></div>
-        <p style="font-size: 14px; color: #94a3b8;">Retrieving telemetry data...</p>
-    </div>
-
-    <!-- Main Dashboard -->
-    <div id="weather-dashboard" class="weather-dashboard">
-        <!-- Current Weather Card -->
-        <div class="weather-current-card">
-            <h2 id="weather-location-heading" class="weather-location-heading">--</h2>
-            <p id="weather-condition-text" class="weather-condition-text">--</p>
-            <div id="weather-temp-display" class="weather-temp-display">--°C</div>
-            
-            <div class="weather-telemetry-grid">
-                <div class="weather-metric-card">
-                    <span class="weather-metric-label">Humidity</span>
-                    <span id="weather-humidity-value" class="weather-metric-value">--%</span>
-                </div>
-                <div class="weather-metric-card">
-                    <span class="weather-metric-label">Wind Speed</span>
-                    <span id="weather-wind-value" class="weather-metric-value">-- km/h</span>
-                </div>
-                <div class="weather-metric-card">
-                    <span class="weather-metric-label">Pressure</span>
-                    <span id="weather-pressure-value" class="weather-metric-value">-- hPa</span>
-                </div>
-            </div>
+        <div id="weather-spinner-container" class="weather-spinner-container" role="status" aria-live="polite">
+            <div class="weather-spinner" aria-hidden="true"></div>
+            <p>Loading weather...</p>
         </div>
 
-        <!-- 5-Day Forecast Section -->
-        <div class="weather-forecast-section">
-            <h3 class="weather-forecast-heading">5-Day Forecast</h3>
-            <div id="weather-forecast-container" class="weather-forecast-container">
-                <!-- Dynamically populated forecast cards -->
+        <section id="weather-dashboard" class="weather-dashboard" aria-label="Weather forecast">
+            <div class="weather-current-card">
+                <h2 id="weather-location-heading" class="weather-location-heading">--</h2>
+                <p id="weather-condition-text" class="weather-condition-text">--</p>
+                <div id="weather-temp-display" class="weather-temp-display">--°C</div>
+
+                <div class="weather-telemetry-grid">
+                    <div class="weather-metric-card">
+                        <span class="weather-metric-label">Humidity</span>
+                        <span id="weather-humidity-value" class="weather-metric-value">--%</span>
+                    </div>
+                    <div class="weather-metric-card">
+                        <span class="weather-metric-label">Wind Speed</span>
+                        <span id="weather-wind-value" class="weather-metric-value">-- km/h</span>
+                    </div>
+                    <div class="weather-metric-card">
+                        <span class="weather-metric-label">Pressure</span>
+                        <span id="weather-pressure-value" class="weather-metric-value">-- hPa</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <div class="weather-forecast-section">
+                <h3 class="weather-forecast-heading">5-Day Forecast</h3>
+                <div id="weather-forecast-container" class="weather-forecast-container">
+                    <!-- Forecast cards are added here. -->
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f7fc">
+    <title>Northstar Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body class="store-page">
+    <header class="site-header">
+        <div class="header-content">
+            <a class="brand" href="#" aria-label="Northstar Market home">
+                <span class="brand-mark" aria-hidden="true">N</span>
+                <span>northstar<span class="brand-light">market</span></span>
+            </a>
+            <button class="cart-open-button" id="cart-open-button" type="button" aria-haspopup="dialog">
+                <svg class="cart-icon" aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M3 4h2l2 11h10l2-8H6.5"></path>
+                    <circle cx="9" cy="19" r="1.25"></circle>
+                    <circle cx="17" cy="19" r="1.25"></circle>
+                </svg>
+                <span>Cart</span>
+                <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="store-main">
+        <section class="store-intro" aria-labelledby="store-title">
+            <p class="eyebrow">THE EVERYDAY EDIT</p>
+            <h1 class="store-title" id="store-title">Find something you'll love.</h1>
+            <p class="store-description">Thoughtful picks for the things you use, wear, and enjoy.</p>
+        </section>
+
+        <section class="catalog-section" aria-label="Product catalog">
+            <div class="catalog-toolbar">
+                <div class="category-filters" role="group" aria-label="Filter products by category">
+                    <button class="filter-button is-active" type="button" data-category="all" aria-pressed="true">All products</button>
+                    <button class="filter-button" type="button" data-category="electronics" aria-pressed="false">Electronics</button>
+                    <button class="filter-button" type="button" data-category="jewelery" aria-pressed="false">Jewelry</button>
+                    <button class="filter-button" type="button" data-category="clothing" aria-pressed="false">Clothing</button>
+                </div>
+                <label class="search-field">
+                    <span class="visually-hidden">Search products</span>
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+                    <input id="product-search" type="search" placeholder="Search products..." autocomplete="off">
+                </label>
+            </div>
+
+            <p class="catalog-status" id="catalog-status" role="status" aria-live="polite">Loading products...</p>
+            <p class="catalog-error" id="catalog-error" role="alert" hidden></p>
+            <div class="product-grid" id="product-grid"></div>
+        </section>
+    </main>
+
+    <dialog class="cart-drawer" id="cart-drawer" aria-labelledby="cart-heading">
+        <div class="drawer-header">
+            <div>
+                <p class="eyebrow">YOUR SELECTION</p>
+                <h2 id="cart-heading">Shopping cart</h2>
+            </div>
+            <button class="icon-button" id="cart-close-button" type="button" aria-label="Close shopping cart">×</button>
+        </div>
+
+        <div class="cart-content">
+            <p class="cart-empty" id="cart-empty">Your cart is waiting for something good.</p>
+            <div class="cart-items" id="cart-items"></div>
+        </div>
+
+        <footer class="cart-footer">
+            <dl class="cart-totals">
+                <div><dt>Subtotal</dt><dd id="cart-subtotal">$0.00</dd></div>
+                <div><dt>Estimated tax (8%)</dt><dd id="cart-tax">$0.00</dd></div>
+                <div><dt>Shipping</dt><dd id="cart-shipping">$0.00</dd></div>
+                <div class="cart-total"><dt>Total</dt><dd id="cart-total">$0.00</dd></div>
+            </dl>
+            <p class="shipping-note">Free shipping on orders of $75 or more.</p>
+            <button class="primary-button checkout-button" id="checkout-button" type="button" disabled>Continue to checkout</button>
+        </footer>
+    </dialog>
+
+    <dialog class="message-dialog" id="checkout-dialog" aria-labelledby="checkout-heading">
+        <p class="eyebrow">DEMO CHECKOUT</p>
+        <h2 id="checkout-heading">Ready to place your order?</h2>
+        <p class="dialog-copy">Review your cart, then confirm to see your order confirmation. This demo will not collect payment.</p>
+        <p class="checkout-total">Order total <strong id="checkout-total">$0.00</strong></p>
+        <div class="dialog-actions">
+            <button class="secondary-button" id="checkout-cancel-button" type="button">Back to cart</button>
+            <button class="primary-button" id="checkout-confirm-button" type="button">Confirm order</button>
+        </div>
+    </dialog>
+
+    <dialog class="message-dialog confirmation-dialog" id="confirmation-dialog" aria-labelledby="confirmation-heading">
+        <span class="confirmation-mark" aria-hidden="true">✓</span>
+        <p class="eyebrow">ORDER COMPLETE</p>
+        <h2 id="confirmation-heading">Thanks for shopping with us.</h2>
+        <p class="dialog-copy">Your demo order <strong id="order-number"></strong> is confirmed. No payment was collected.</p>
+        <button class="primary-button confirmation-button" id="confirmation-close-button" type="button">Continue browsing</button>
+    </dialog>
+</body>
+</html>

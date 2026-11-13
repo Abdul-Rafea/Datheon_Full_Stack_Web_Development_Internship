@@ -1,6 +1,6 @@
 // DOM Elements
 const searchInput = document.getElementById('weather-search-input');
-const searchButton = document.getElementById('weather-search-button');
+const searchForm = document.getElementById('weather-search-form');
 const errorBanner = document.getElementById('weather-error-banner');
 const spinnerContainer = document.getElementById('weather-spinner-container');
 const dashboard = document.getElementById('weather-dashboard');
@@ -141,14 +141,9 @@ async function fetchWeatherData(cityName) {
 }
 
 // Event Listeners
-searchButton.addEventListener('click', () => {
+searchForm.addEventListener('submit', (event) => {
+    event.preventDefault();
     fetchWeatherData(searchInput.value);
-});
-
-searchInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        fetchWeatherData(searchInput.value);
-    }
 });
 
 // Load default city on startup
