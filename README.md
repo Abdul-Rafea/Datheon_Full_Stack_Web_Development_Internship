@@ -19,4 +19,4 @@
 - Filters by electronics, jewelry, and clothing, with product search
 - Provides a persistent shopping cart with quantity controls and subtotal, tax, and shipping calculations
 - Includes a slide-out cart and simulated checkout with order confirmation
-- Responsive storefront using Fira Sans and a blue, cool-neutral color palette
+- Responsive layout
